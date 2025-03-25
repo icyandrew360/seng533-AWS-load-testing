@@ -1,6 +1,12 @@
 # seng533-AWS-load-testing
 
+# before running scripts
+run make setup
+
+ensure EC2-far.pem is in your project's root directory
+
 ensure you restrict permissions of this key file with this command
+
 chmod 400 "EC2-far.pem"
 
 ssh -i "EC2-far.pem" ec2-user@ec2-54-85-19-156.compute-1.amazonaws.com
