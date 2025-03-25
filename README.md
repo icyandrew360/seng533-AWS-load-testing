@@ -10,6 +10,10 @@ dd if=/dev/urandom of=test-1mb.file bs=1M count=1
 
 # upload test files
 aws s3 cp test-1mb.file s3://seng533-standard-storage-group15/test-upload-1mb-agent1.file
+aws s3 cp test-1mb.file s3://seng533-intelligent-tiering-group15/test-upload-1mb-agent1.file --storage-class INTELLIGENT_TIERING
+aws s3 cp test-1mb.file s3://seng533-glacier-group15/test-upload-1mb-agent1.file --storage-class GLACIER
 
 # download test files
 aws s3 cp s3://seng533-standard-storage-group15/test-upload-1mb-agent1.file downloaded-1mb.file
+aws s3 cp s3://seng533-intelligent-tiering-group15/test-upload-1mb-agent1.file downloaded-1mb.file
+aws s3 cp s3://seng533-glacier-group15/test-upload-1mb-agent1.file downloaded-1mb.file
