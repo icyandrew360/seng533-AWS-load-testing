@@ -100,7 +100,12 @@ def main():
     s3_intelligent_upload_data = time_and_upload_files_to_s3_intelligent(ssh)
     s3_glacier_upload_data = time_and_upload_files_to_s3_glacier(ssh)
 
-    data = np.array([["storage type", "total time", "total size", "total tput"] ,s3_standard_upload_data, s3_intelligent_upload_data, s3_glacier_upload_data])
+    data = np.array([
+        ["storage type", "total time", "total size", "total tput"],
+        s3_standard_upload_data, 
+        s3_intelligent_upload_data, 
+        s3_glacier_upload_data
+    ])
     
     print("Importing the following data to CSV: ")
     print(data)
