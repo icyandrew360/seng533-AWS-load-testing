@@ -21,7 +21,7 @@ def main():
     s3_glacier_upload_data = time_and_upload_files_to_s3_glacier(ssh)
 
     upload_data = np.array([
-        ["storage type", "total time", "total size", "total tput"],
+        ["storage type", "total time (s)", "total size (MB)", "total tput (MB/s)"],
         s3_standard_upload_data, 
         s3_intelligent_upload_data, 
         s3_glacier_upload_data
@@ -32,7 +32,7 @@ def main():
     s3_glacier_download_data = time_and_download_files_from_s3_glacier(ssh)
 
     download_data = np.array([
-        ["storage type", "total time", "total size", "total tput"],
+        ["storage type", "total time (s)", "total size (MB)", "total tput (MB/s)"],
         s3_standard_download_data, 
         s3_intelligent_download_data, 
         s3_glacier_download_data
