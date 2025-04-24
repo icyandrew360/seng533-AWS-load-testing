@@ -29,7 +29,7 @@ def main():
     
     s3_standard_download_data = time_and_download_files_from_s3_standard(ssh)
     s3_intelligent_download_data = time_and_download_files_from_s3_intelligent(ssh)
-    s3_glacier_download_data = time_and_download_files_from_s3_glacier(ssh)
+    s3_glacier_download_data = time_and_download_files_from_s3_glacier_ir(ssh)
 
     download_data = np.array([
         ["storage type", "total time (s)", "total size (MB)", "total tput (MB/s)"],
